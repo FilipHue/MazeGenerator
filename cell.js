@@ -52,7 +52,7 @@ class Cell {
         let y = this.j * dimension;
 
         noStroke();
-        fill(0, 0, 255, 100);
+        fill(0, 255, 255, 100);
         rect(x, y, dimension, dimension);
     }
 

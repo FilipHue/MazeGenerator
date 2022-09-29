@@ -1,4 +1,4 @@
-const DIM = 80;
+const DIM = 40;
 let grid;
 let stack = [];
 let currentCell;
@@ -26,6 +26,21 @@ function setup() {
 
 function draw() {
 	background(0);
+	
+	// while (stack.length != 0) {
+	// 	currentCell = stack.pop();
+	// 	let nextCell = currentCell.checkNeighbours(grid.canvas, collumns, rows);
+
+	// 	if (nextCell) {
+	// 		stack.push(currentCell);
+			
+	// 		grid.removeWalls(currentCell, nextCell);
+	// 		nextCell.visited = true;
+	// 		currentCell = nextCell;
+			
+	// 		stack.push(nextCell);
+	// 	}
+	// }
 
 	grid.show(currentCell);
 
