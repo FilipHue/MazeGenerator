@@ -16,36 +16,36 @@ It works as follows:
         4.  Mark the chosen cell as visited and push it to the stack
   
   So let's break it down:
-3. Choose an initial cell, mark it as visited and push it to the stack
+1. Choose an initial cell, mark it as visited and push it to the stack
 ```js
 currentCell = grid.canvas[0];
 currentCell.visited = true;
 stack.push(currentCell);
 ```
-4. While the stack is not empty
+2. While the stack is not empty
 ```js
  while (stack.length != 0) { ... }
 ```
-5. Pop a cell from the stack and make it a current cell
+3. Pop a cell from the stack and make it a current cell
 ```js
 currentCell = stack.pop();
 ```
-6.  If the current cell has any neighbors which have not been visited
+4.  If the current cell has any neighbors which have not been visited
 ```js
 let nextCell = currentCell.checkNeighbours(grid.canvas, collumns, rows);
 if (nextCell) { ... }
 ```
-7. Push the current cell to the stack
+5. Push the current cell to the stack
 ```js
 stack.push(currentCell);
 ```
-8. Choose one of the unvisited neighbors
+6. Choose one of the unvisited neighbors
   This is already done in the checkNeighbours() function.
-9. Remove the wall between the current cell and the chosen cell
+7. Remove the wall between the current cell and the chosen cell
 ```js
 grid.removeWalls(currentCell, nextCell);
 ```
-10. Mark the chosen cell as visited and push it to the stack
+8. Mark the chosen cell as visited and push it to the stack
 ```js
 nextCell.visited = true;
 currentCell = nextCell;
@@ -214,3 +214,5 @@ Let's break down the structure of the program. The main files are:
 
 ## Mentions
 The method is much better explained at this link: https://en.wikipedia.org/wiki/Maze_generation_algorithm
+
+
